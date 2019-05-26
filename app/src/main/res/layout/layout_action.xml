@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#45FFEB3B"
+    android:orientation="vertical"
+    tools:context=".TvAction">
+
+    <TextView
+        android:id="@+id/action_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/action_player"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        app:resize_mode="fixed_width"/>
+    <!--/**-->
+    <!--*resize_mode可以指定这种视频的宽高比计算模式，共有四种模式，fixed_width代表根据宽度来动态计算高度，-->
+    <!--*宽度不会变化，fixed_height与之相反，fill模式会忽略宽高比，不进行动态计算，fit为默认模式，如果高度-->
+    <!--*变形就动态计算高度来适配，宽度变形就动态计算宽度来适配。-->
+    <!--**/-->
+    <Button
+        android:id="@+id/action_fill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FFEB3B"
+        android:text="后退" />
+</LinearLayout>
